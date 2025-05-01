@@ -1,0 +1,12 @@
+body {
+    background-image:url('../imagenes/Fiesta_fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+  }
