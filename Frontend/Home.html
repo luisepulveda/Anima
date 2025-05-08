@@ -4,66 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>principal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="..\Frontend\css\home.css">
+
  
 </head>
 <body>
    <aside class="sidebar">
     
     <ul class="sidebar_list">
+
         <li class="sidebar_element">
+
+            
             <img src="imagenes/Fiesta_fondo.jpg" class="sidebar_icons-logo">
             <div class="sidebar_hide">
-                <h1>ANÍMA</h1>
+                <h1 class="font-size 2rem">ANÍMA</h1>
             </div>
-        </li>
-        <li class="sidebar_element">
-
-            
-             
-            <img src="imagenes/home.icon.svg" class="sidebar_icons">
-
-            <div class="sidebar_hide">
-                <a href="Login.html" class="sidebar_text" aria-label="">historial</a>            </div>
 
         </li>
-
-        <li class="sidebar_element">
-
-            
-            <a href="Login.html">
-             <img href="Login.html "src="imagenes/home.icon.svg" class="sidebar_icons">
-
-             <div class="sidebar_hide">
-                <a href="Login.html" class="sidebar_text" aria-label="">Perfil</a>
-
-             </div>
+        <div class="sidebar_element">
+            <a href="#"> 
+                <i class="sidebar_icons bi-whatsapp"></i>
+                <div class="sidebar_hide">
+                    <a class="sidebar_text text-decoration-none" >Whatsapp</a>            </div>
+                </div>
             </a>
         </li>
 
-        <li class="sidebar_element-avatar">
-
-            <img src="" >
-
-            <div class="sidebar_hide sidebar_element-avatar" >
-
-            </div>
-
+        <li class="sidebar_element">
+            <a href="#">
+                <i class="sidebar_icons bi-envelope-fill"></i>                <div class="sidebar_hide">
+                    <a class="sidebar_text text-decoration-none" >mails</a>
+                </div>
+            </a>
+        </li>
+            
+        <li class="sidebar_element mt-auto">
+            <a href="Login.html" class="text-decoration-none ">
+                <i class="sidebar_icons bi-box-arrow-right me-2"></i>
+                <div class="sidebar_hide">
+                    <a class="sidebar_text text-decoration-none">Cerrar Sesion</a>
+                </div>
+            </a>
         </li>
     </ul>
    </aside>
 
-   
-    
+   <div class="main-container d-flex flex-column justify-content-center align-items-center ">
+    <h1 class="text-center mb-4">Bienvenido a Aníma</h1>
+    <p class="text-center">Aquí encontraras tus opciones para lo que deseas celebrar</p>
 
-    <div class="main-container">
-        <h1>Bienvenido a Aníma</h1>
-        <p>Este es el contenido principal que estará detrás del sidebar.</p>
+    <div class="form-checklist d-flex justify-content-center gap-3">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="cumpleanos" onclick="toggleOptions('cumpleanos')">
+        <label class="form-check-label" for="cumpleanos">Cumpleaños</label>
     </div>
- </body>
-    
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="boda" onclick="toggleOptions('boda')">
+        <label class="form-check-label" for="boda">Boda</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="paseo" onclick="toggleOptions('paseo')">
+        <label class="form-check-label" for="paseo">Paseo</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="finDeAno" onclick="toggleOptions('finDeAno')">
+        <label class="form-check-label" for="finDeAno">Fin de Año</label>
+    </div>
+</div>
+
+<div id="optionsContainer" class="mt-4" style="display: none;">
+    <ul class="select-list">
+        <li class="mb-3">
+            <label for="select1" class="form-label">Opción 1:</label>
+            <select id="select1" name="select1" class="form-select">
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+            </select>
+        </li>
+        <li class="mb-3">
+            <label for="select2" class="form-label">Opción 2:</label>
+            <select id="select2" name="select2" class="form-select">
+                <option value="opcionA">Opción A</option>
+                <option value="opcionB">Opción B</option>
+                <option value="opcionC">Opción C</option>
+            </select>
+        </li>
+        <li class="mb-3">
+            <label for="select3" class="form-label">Opción 3:</label>
+            <select id="select3" name="select3" class="form-select">
+                <option value="uno">Uno</option>
+                <option value="dos">Dos</option>
+                <option value="tres">Tres</option>
+            </select>
+        </li>
+    </ul>
+</div>
+
+ 
+<script src="..\jquery.js\home.js"></script>
 </body>
 </html>
